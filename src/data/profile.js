@@ -8,7 +8,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/Raflyjuliawan',
   instagram: 'https://www.instagram.com/raflyfernandes._',
   summary:
-    'Mahasiswa IT yang fokus membangun aplikasi web responsif, rapi, dan mudah digunakan. Tertarik pada frontend engineering, UI implementation, dan problem solving berbasis teknologi.',
+    'Information Systems and Technology Education student with a strong interest in frontend development and UI implementation. I build responsive, well-structured web applications and enjoy turning ideas into practical digital experiences through technology.',
   stats: [
     { value: '8+', label: 'Jumlah Project' },
     { value: '3+', label: 'Sertifikat' },
@@ -19,13 +19,13 @@ export const profile = {
       period: '2023 - Sekarang',
       title: 'Mahasiswa Pendidikan Sistem dan Teknologi Informasi',
       place: 'Universitas Pendidikan Indonesia',
-      description: 'Mempelajari pengembangan perangkat lunak, analisis sistem, jaringan komputer, basis data, UI/UX, teknologi pendidikan, serta penerapan teknologi informasi untuk mendukung proses pembelajaran dan penyelesaian masalah di dunia pendidikan maupun industri.',
+      description: 'Studying software development, systems analysis, computer networking, databases, UI/UX design, educational technology, and the application of information technology to support learning processes and solve problems in both educational and industrial environments.',
     },
     {
       period: '2020 - 2023',
       title: 'SMA',
       place: 'SMAN 1 Tarumajaya Bekasi',
-      description: 'Menyelesaikan pendidikan menengah atas dengan mengembangkan kemampuan akademik, berpikir kritis, kerja sama tim, dan komunikasi sebagai bekal untuk melanjutkan studi di bidang teknologi informasi.',
+      description: 'Completed high school education while developing academic knowledge, critical thinking, teamwork, and communication skills as a foundation for pursuing higher education in Information Technology.',
     },
   ],
 };

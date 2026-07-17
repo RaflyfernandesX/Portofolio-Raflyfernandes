@@ -4,6 +4,7 @@ import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { navLinks } from '../data/navigation';
 import { useScrollPosition } from '../hooks/useScrollPosition';
 import ThemeToggle from './ui/ThemeToggle';
+import profilePhoto from '../assets/profile.jpg';
 
 export default function Navbar({ theme, onToggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,11 @@ export default function Navbar({ theme, onToggleTheme }) {
     >
       <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <NavLink to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-primary font-bold text-white shadow-glow">
-            
-          </span>
+          <img
+  src={profilePhoto}
+  alt="Rafly Fernandes"
+  className="h-10 w-10 rounded-2xl object-cover shadow-glow"
+/>
           <span className="text-sm font-semibold uppercase tracking-[0.18em] text-slate-950 dark:text-text">rafly fernandes</span>
         </NavLink>
 

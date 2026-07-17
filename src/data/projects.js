@@ -1,12 +1,12 @@
 export const projects = [
   {
-    title: 'Lucy Flip',
+    title: 'Lucky Flip',
     type: ' Educational Game',
     description:
       'An educational probability game designed for Grade 12 students, featuring interactive gameplay and quiz-based learning.',
     tech: ['Unity', 'C#', 'Canva'],
     image: 'linear-gradient(135deg, rgba(59,130,246,0.95), rgba(14,165,233,0.45)), radial-gradient(circle at 70% 30%, rgba(255,255,255,0.36), transparent 12rem)',
-    github: 'https://github.com/username/taskflow-dashboard',
+    github: 'https://github.com/RaflyfernandesX/Lucky-Flip-Unity',
     demo: '#',
   },
   {

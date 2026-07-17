@@ -61,7 +61,8 @@ export default function Home() {
           </Link>
 
           <a
-            href="#"
+            href="/CV Raflyfernandes.pdf"
+            download
             aria-label="Download CV"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 px-6 py-3 font-semibold text-slate-950 transition hover:border-primary hover:bg-white/70 dark:border-white/15 dark:text-text dark:hover:bg-white/10"
           >
@@ -92,10 +93,11 @@ export default function Home() {
 
           <div className="relative mx-auto aspect-square max-w-[17rem] overflow-hidden rounded-[2rem] border border-white/20 bg-gradient-to-br from-primary via-sky-400 to-slate-900 p-1 shadow-glow">
             <img
-              src={profilePhoto}
-              alt="Foto profil"
-              className="h-full w-full rounded-[1.7rem] object-cover"
-            />
+                src={profilePhoto}
+                alt="Foto profil"
+                className="h-full w-full rounded-[1.7rem] object-cover"
+                style={{ objectPosition: '50% 25%' }}
+/>
           </div>
 
           <div className="mt-6 space-y-4 rounded-3xl border border-slate-200 bg-white/60 p-5 font-mono text-sm dark:border-white/10 dark:bg-slate-900/80">

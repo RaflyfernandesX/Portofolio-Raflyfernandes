@@ -6,9 +6,9 @@ import { profile } from '../data/profile';
 import { fadeInUp, staggerContainer } from '../utils/animation';
 
 const values = [
-  { title: 'Problem Solver', icon: FiTarget, body: 'Memecahkan masalah secara sistematis melalui analisis, perencanaan, dan implementasi solusi yang efektif.' },
-  { title: 'UI/UX Focus', icon: FiZap, body: 'Memperhatikan detail desain, konsistensi antarmuka, responsivitas, dan pengalaman pengguna yang intuitif.' },
-  { title: 'Fast Learner', icon: FiMapPin, body: 'Cepat beradaptasi dengan teknologi baru, mampu mempelajari tools dan framework secara mandiri untuk mendukung pengembangan proyek.' },
+  { title: 'Problem Solver', icon: FiTarget, body: 'Approaching problems systematically through analysis, planning, and the implementation of effective and creative solutions.' },
+  { title: 'UI/UX Focus', icon: FiZap, body: 'Paying close attention to design details, interface consistency, responsiveness, and creating intuitive user experiences.' },
+  { title: 'Fast Learner', icon: FiMapPin, body: 'Quickly adapting to new technologies and independently learning tools and frameworks to support project development.' },
 ];
 
 export default function About() {
@@ -24,8 +24,8 @@ export default function About() {
           <p className="text-sm uppercase tracking-[0.2em] text-primary">{profile.location}</p>
           <h2 className="mt-4 text-2xl font-bold text-slate-950 dark:text-white">Muhammad Rafly Juliawan Fernandes</h2>
           <p className="mt-4 leading-8 text-slate-600 dark:text-slate-300">
-            Mahasiswa Pendidikan Sistem dan Teknologi Informasi di Universitas Pendidikan Indonesia dengan minat yang kuat pada Pengembangan Front-End, Desain UI/UX, dan Sistem Informasi. Bersemangat dalam menciptakan aplikasi web responsif yang berpusat pada pengguna dan memecahkan masalah dunia nyata melalui teknologi. Terus meningkatkan keterampilan teknis melalui proyek akademik dan pribadi sambil bersemangat untuk belajar, berkolaborasi, dan berkontribusi dalam industri TI.
-          </p>
+           Information Systems and Technology Education student at Universitas Pendidikan Indonesia with a strong interest in Front-End Development, UI/UX Design, and Information Systems. Passionate about building responsive, user-centered web applications and solving real-world problems through technology. Continuously developing technical skills through academic and personal projects while eager to learn, collaborate, and contribute to the IT industry.
+           </p>
           <div className="mt-7 grid grid-cols-3 gap-3">
             {profile.stats.map((stat) => (
               <div key={stat.label} className="rounded-3xl border border-slate-200 bg-white/60 p-4 dark:border-white/10 dark:bg-slate-950/35">
@@ -35,7 +35,7 @@ export default function About() {
             ))}
           </div>
         </motion.div>
-        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-4 sm:grid-cols-3">
+        <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-4 sm:grid-cols-3 items-start">
           {values.map((item) => {
             const Icon = item.icon;
             return (

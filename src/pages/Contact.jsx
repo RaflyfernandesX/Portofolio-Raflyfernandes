@@ -37,9 +37,9 @@ export default function Contact() {
   const contacts = useMemo(
     () => [
       { label: 'Email', value: profile.email, icon: FiMail, href: `mailto:${profile.email}` },
-      { label: 'GitHub', value: 'github.com/RaflyfernadnesX', icon: FaGithub, href: profile.github },
+      { label: 'GitHub', value: 'github.com/RaflyfernandesX', icon: FaGithub, href: profile.github },
       { label: 'LinkedIn', value: 'linkedin.com/in/raflyjuliawan', icon: FaLinkedin, href: profile.linkedin },
-      { label: 'Instagram', value: '@raflyfernadnes._', icon: FaInstagram, href: profile.instagram },
+      { label: 'Instagram', value: '@raflyfernandes._', icon: FaInstagram, href: profile.instagram },
     ],
     [],
   );
