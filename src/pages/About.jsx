@@ -27,12 +27,7 @@ export default function About() {
            Information Systems and Technology Education student at Universitas Pendidikan Indonesia with a strong interest in Front-End Development, UI/UX Design, and Information Systems. Passionate about building responsive, user-centered web applications and solving real-world problems through technology. Continuously developing technical skills through academic and personal projects while eager to learn, collaborate, and contribute to the IT industry.
            </p>
           <div className="mt-7 grid grid-cols-3 gap-3">
-            {profile.stats.map((stat) => (
-              <div key={stat.label} className="rounded-3xl border border-slate-200 bg-white/60 p-4 dark:border-white/10 dark:bg-slate-950/35">
-                <p className="text-xl font-bold text-primary">{stat.value}</p>
-                <p className="mt-1 text-xs leading-5 text-slate-600 dark:text-slate-400">{stat.label}</p>
-              </div>
-            ))}
+           
           </div>
         </motion.div>
         <motion.div variants={staggerContainer} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid gap-4 sm:grid-cols-3 items-start">
