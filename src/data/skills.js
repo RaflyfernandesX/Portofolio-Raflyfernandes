@@ -31,6 +31,7 @@ export const skillGroups = [
     items: [
       { name: 'Figma', icon: SiFigma, level: 80 },
       { name: 'UI/UX Design', icon: FiPenTool, level: 80 },
+      { name: 'Canva', icon: FaPalette, level: 85 },
     ],
   },
   {
