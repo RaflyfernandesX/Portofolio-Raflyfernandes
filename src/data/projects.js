@@ -2,6 +2,7 @@
 export const projects = [
   {
     title: 'Lucky Flip',
+    year:'2025',
     type: 'Educational Game',
     description:
       'An educational probability game designed for Grade 12 students, featuring interactive gameplay and quiz-based learning.',
@@ -12,6 +13,7 @@ export const projects = [
   {
     
   title: 'Skillbridge',
+  year:'2026',
   type: 'Website Prototype',
   description:
     'Prototype of a web-based career mentoring platform with mentor exploration features, user dashboard, mentoring session booking, and a modern responsive UI design.',
@@ -23,6 +25,7 @@ export const projects = [
   
   {
     title: 'Seleksi Program Studi',
+    year:'2024',
     type: 'Application Website Prototype',
     description:
       'A responsive web application that simulates the study program selection process at UPI Purwakarta. Users can choose a study program, enter academic scores, calculate their average automatically, and receive real-time admission results based on each program’s minimum requirements.',
@@ -33,6 +36,7 @@ export const projects = [
   },
   {
     title: 'MyTelkomsel Redesign',
+    year:'2025',
     type: 'Mobile Application UI/UX Redesign',
     description:
       'A collaborative UI/UX redesign project focused on improving the user experience of the MyTelkomsel application. The project involved analyzing the existing interface, identifying usability issues, and designing a more intuitive and visually consistent mobile application experience.',

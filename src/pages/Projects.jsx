@@ -43,8 +43,7 @@ export default function Projects() {
                   className="h-full w-full object-cover"
                 />
               )}
-
-                </div>
+            </div>
 
             <p className="text-sm font-semibold text-primary">
               {project.type}
@@ -53,6 +52,12 @@ export default function Projects() {
             <h2 className="mt-3 text-xl font-bold text-slate-950 dark:text-white">
               {project.title}
             </h2>
+
+            {project.year && (
+              <p className="mt-1 text-base font-semibold text-slate-500 dark:text-slate-400">
+                {project.year}
+              </p>
+            )}
 
             <p className="mt-3 flex-1 text-sm leading-7 text-slate-600 dark:text-slate-400">
               {project.description}
