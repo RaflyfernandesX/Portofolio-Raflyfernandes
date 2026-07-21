@@ -89,7 +89,7 @@ export default function Contact() {
       } else {
         setSubmitError('Gagal mengirim pesan. Coba lagi beberapa saat.');
       }
-    } catch (error) {
+    } catch {
       setSubmitError('Terjadi kesalahan jaringan. Coba lagi.');
     } finally {
       setIsSubmitting(false);
