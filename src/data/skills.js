@@ -18,11 +18,11 @@ export const skillGroups = [
   {
     title: 'Frontend Development',
     items: [
-      { name: 'HTML', icon: FaHtml5, level: 90 },
+      { name: 'HTML', icon: FaHtml5, level: 85 },
       { name: 'CSS', icon: FaCss3Alt, level: 85 },
       { name: 'JavaScript', icon: RiJavascriptFill, level: 80 },
       { name: 'React', icon: FaReact, level: 75 },
-      { name: 'Tailwind CSS', icon: SiTailwindcss, level: 85 },
+      { name: 'Tailwind CSS', icon: SiTailwindcss, level: 75 },
       { name: 'Vite', icon: SiVite, level: 80 },
     ],
   },
