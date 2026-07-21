@@ -33,6 +33,8 @@ export default function Contact() {
   const [values, setValues] = useState({ name: '', email: '', message: '' });
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const contacts = useMemo(
     () => [
@@ -50,16 +52,47 @@ export default function Contact() {
     setValues((currentValues) => ({ ...currentValues, [name]: value }));
     setErrors((currentErrors) => ({ ...currentErrors, [name]: undefined }));
     setIsSubmitted(false);
+    setSubmitError('');
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const nextErrors = validateForm(values);
     setErrors(nextErrors);
 
-    if (Object.keys(nextErrors).length === 0) {
-      setIsSubmitted(true);
-      setValues({ name: '', email: '', message: '' });
+    if (Object.keys(nextErrors).length > 0) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: `Pesan baru dari ${values.name} - Portofolio`,
+          from_name: values.name,
+          name: values.name,
+          email: values.email,
+          message: values.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setIsSubmitted(true);
+        setValues({ name: '', email: '', message: '' });
+      } else {
+        setSubmitError('Gagal mengirim pesan. Coba lagi beberapa saat.');
+      }
+    } catch (error) {
+      setSubmitError('Terjadi kesalahan jaringan. Coba lagi.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -140,12 +173,21 @@ export default function Contact() {
                 {errors.message ? <p id="message-error" className="mt-2 text-sm text-red-400">{errors.message}</p> : null}
               </div>
             </div>
-            <button type="submit" className="mt-5 w-full rounded-full bg-primary px-6 py-3 font-semibold text-white shadow-glow transition hover:bg-blue-500">
-            Kirim Pesan
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="mt-5 w-full rounded-full bg-primary px-6 py-3 font-semibold text-white shadow-glow transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {isSubmitting ? 'Mengirim...' : 'Kirim Pesan'}
             </button>
             {isSubmitted ? (
               <p className="mt-4 rounded-2xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-600 dark:text-emerald-300">
-                Pesan tervalidasi. Integrasi backend bisa ditambahkan nanti.
+                Pesan berhasil terkirim. Terima kasih sudah menghubungi saya!
+              </p>
+            ) : null}
+            {submitError ? (
+              <p className="mt-4 rounded-2xl border border-red-400/30 bg-red-400/10 px-4 py-3 text-sm text-red-500 dark:text-red-300">
+                {submitError}
               </p>
             ) : null}
           </form>

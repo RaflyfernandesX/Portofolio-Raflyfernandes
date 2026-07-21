@@ -1,41 +1,140 @@
 import { FaCss3Alt, FaGitAlt, FaHtml5, FaReact } from 'react-icons/fa';
 import { FiPenTool } from 'react-icons/fi';
 import { RiJavascriptFill } from 'react-icons/ri';
-import { SiCisco, SiFigma, SiTailwindcss, SiVite } from 'react-icons/si';
+import {
+  SiCisco,
+  SiFigma,
+  SiGithub,
+  SiTailwindcss,
+  SiVite,
+} from 'react-icons/si';
 import { TbNetwork } from 'react-icons/tb';
 
 export const skillGroups = [
   {
-    title: 'Frontend',
+    title: 'Frontend Development',
     items: [
-      { name: 'HTML', level: 90, icon: FaHtml5 },
-      { name: 'CSS', level: 86, icon: FaCss3Alt },
-      { name: 'JavaScript', level: 78, icon: RiJavascriptFill },
-      { name: 'React', level: 74, icon: FaReact },
+      {
+        name: 'HTML',
+        icon: FaHtml5,
+        level: 85,
+      },
+      {
+        name: 'CSS',
+        icon: FaCss3Alt,
+        level: 85,
+      },
+      {
+        name: 'JavaScript',
+        icon: RiJavascriptFill,
+        level: 80,
+      },
+      {
+        name: 'React',
+        icon: FaReact,
+        level: 65,
+      },
+      {
+        name: 'Tailwind CSS',
+        icon: SiTailwindcss,
+        level: 70,
+      },
+      {
+        name: 'Vite',
+        icon: SiVite,
+        level: 70,
+      },
     ],
   },
   {
-    title: 'UI/UX',
+    title: 'UI/UX & Design',
     items: [
-      { name: 'Figma', level: 74, icon: SiFigma },
-      { name: 'Wireframe', level: 70, icon: FiPenTool },
-      { name: 'Responsive UI', level: 82, icon: SiTailwindcss },
+      {
+        name: 'Figma',
+        icon: SiFigma,
+        level: 80,
+      },
+      {
+        name: 'UI/UX Design',
+        icon: FiPenTool,
+        level: 75,
+      },
     ],
   },
   {
-    title: 'Networking',
+    title: 'Tools & Networking',
     items: [
-      { name: 'TCP/IP Basic', level: 68, icon: TbNetwork },
-      { name: 'Subnetting', level: 64, icon: SiCisco },
-      { name: 'Troubleshooting', level: 70, icon: TbNetwork },
+      {
+        name: 'Git',
+        icon: FaGitAlt,
+        level: 75,
+      },
+      {
+        name: 'GitHub',
+        icon: SiGithub,
+        level: 80,
+      },
+      {
+        name: 'Cisco',
+        icon: SiCisco,
+        level: 50,
+      },
+      {
+        name: 'Computer Networking',
+        icon: TbNetwork,
+        level: 60,
+      },
     ],
   },
+];
+
+export const tools = [
   {
-    title: 'Tools',
-    items: [
-      { name: 'Vite', level: 80, icon: SiVite },
-      { name: 'Tailwind CSS', level: 82, icon: SiTailwindcss },
-      { name: 'Git', level: 72, icon: FaGitAlt },
-    ],
+    name: 'React',
+    icon: FaReact,
+  },
+  {
+    name: 'JavaScript',
+    icon: RiJavascriptFill,
+  },
+  {
+    name: 'HTML',
+    icon: FaHtml5,
+  },
+  {
+    name: 'CSS',
+    icon: FaCss3Alt,
+  },
+  {
+    name: 'Tailwind CSS',
+    icon: SiTailwindcss,
+  },
+  {
+    name: 'Vite',
+    icon: SiVite,
+  },
+  {
+    name: 'Git',
+    icon: FaGitAlt,
+  },
+  {
+    name: 'GitHub',
+    icon: SiGithub,
+  },
+  {
+    name: 'Figma',
+    icon: SiFigma,
+  },
+  {
+    name: 'Cisco',
+    icon: SiCisco,
+  },
+  {
+    name: 'Networking',
+    icon: TbNetwork,
+  },
+  {
+    name: 'UI/UX Design',
+    icon: FiPenTool,
   },
 ];

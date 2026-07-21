@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   color-scheme: light;
   background: #f8fafc;
@@ -62,4 +61,48 @@ a {
 
 .text-balance {
   text-wrap: balance;
+}
+
+.marquee-row {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+.animate-scroll-left {
+  animation: scroll-left 26s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 26s linear infinite;
+}
+
+.marquee-row:hover .animate-scroll-left,
+.marquee-row:hover .animate-scroll-right {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
 }

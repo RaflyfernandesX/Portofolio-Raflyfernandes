@@ -27,7 +27,7 @@ export default function Home() {
           variants={fadeInUp}
           className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-primary"
         >
-          Available for Internship
+          IT Student & Web Developer
         </motion.p>
 
         <motion.h1

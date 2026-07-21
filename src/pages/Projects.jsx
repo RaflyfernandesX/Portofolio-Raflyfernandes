@@ -27,13 +27,24 @@ export default function Projects() {
             className="glass-panel flex min-h-[23rem] flex-col rounded-[2rem] p-6 transition hover:-translate-y-1 hover:border-primary/45"
           >
             <div
-              className="mb-6 grid h-40 place-items-end overflow-hidden rounded-[1.5rem] border border-slate-200 p-4 dark:border-white/10"
-              style={{ background: project.image }}
+              className="relative mb-6 h-40 overflow-hidden rounded-[1.5rem] border border-slate-200 dark:border-white/10"
+              style={
+                project.image.startsWith('linear-gradient')
+                  ? { background: project.image }
+                  : undefined
+              }
               role="img"
               aria-label={`Screenshot preview ${project.title}`}
             >
-              <div className="h-20 w-full rounded-2xl border border-white/25 bg-white/30 backdrop-blur-md" />
-            </div>
+              {!project.image.startsWith('linear-gradient') && (
+                <img
+                  src={project.image}
+                  alt={`Screenshot preview ${project.title}`}
+                  className="h-full w-full object-cover"
+                />
+              )}
+
+                </div>
 
             <p className="text-sm font-semibold text-primary">
               {project.type}
@@ -59,15 +70,17 @@ export default function Projects() {
             </div>
 
             <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary dark:border-white/10 dark:text-slate-200"
-              >
-                <FiGithub aria-hidden="true" />
-                GitHub
-              </a>
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary dark:border-white/10 dark:text-slate-200"
+                >
+                  <FiGithub aria-hidden="true" />
+                  GitHub
+                </a>
+              )}
 
               {project.demo && (
                 <a

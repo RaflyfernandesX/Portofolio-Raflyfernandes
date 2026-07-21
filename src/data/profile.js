@@ -10,9 +10,9 @@ export const profile = {
   summary:
     'Information Systems and Technology Education student with a strong interest in frontend development and UI implementation. I build responsive, well-structured web applications and enjoy turning ideas into practical digital experiences through technology.',
   stats: [
-    { value: '8+', label: 'Jumlah Project' },
-    { value: '3+', label: 'Sertifikat' },
-    { value: '2023', label: 'Mulai Belajar' },
+    { value: '3+', label: 'Projects Completed' },
+    { value: '4+', label: 'Certifications' },
+    { value: '2023', label: 'Started Learning' },
   ],
   education: [
     {
